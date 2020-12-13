@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop_app.View1">
+  <ContentView.Content>
+      <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#7DC2FF"  VerticalOptions="End" >
+            <Label x:Name="product_name" FontSize="17" TextColor="Black" VerticalOptions="Center" WidthRequest="105" HorizontalOptions="Start"/>
+            <Entry x:Name="product_price" FontSize="16" Placeholder="0.0" Keyboard="Numeric" TextChanged="price_changed" WidthRequest="60" HorizontalOptions="End" />
+            <Entry x:Name="product_quantity" FontSize="16" Placeholder="0" Keyboard="Numeric" TextChanged="quantity_changed" WidthRequest="33" HorizontalOptions="EndAndExpand" />
+            <Label x:Name="total_price" FontSize="17" Text="0" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="End" WidthRequest="55" HorizontalOptions="EndAndExpand" />
+            <Button x:Name="del_button" FontSize="10" Text="Удалить" Clicked="DeleteButtonClicked" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

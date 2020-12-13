@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shop_app.MainPage"
+             x:Name="main_page">
+    
+    <StackLayout x:Name="main_lay" VerticalOptions="Fill">
+        <StackLayout BackgroundColor="#2196F3" Padding="10" Orientation="Horizontal" >
+            <Entry x:Name="entry" FontSize="17" Placeholder="Введите название продукта" ClearButtonVisibility="WhileEditing" Completed="Enter_button" />
+            <Button Text="Добавить" FontSize="14" Clicked="OnButtonClicked"/>
+        </StackLayout>
+            <StackLayout >
+            <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="StartAndExpand">
+                <Label Text="Товар" Margin="2" WidthRequest="68" FontSize="14"/>
+                <Label Text="Цена" Margin="2" FontSize="14"/>
+                <Label Text="Количество" Margin="2" FontSize="14"/>
+                <Label Text="Сумма" Margin="2" FontSize="14"/>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView x:Name="main_scroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout x:Name="mainlist" HorizontalOptions="FillAndExpand">
+                
+            </StackLayout>
+        </ScrollView>
+        <StackLayout BackgroundColor="#2196F3" Padding="10" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Label Text="Общая сумма:" FontSize="17"  VerticalOptions="Center" HorizontalOptions="Start" TextColor="White"/>
+            <Label x:Name="all_total_price" FontSize="19" VerticalOptions="Center" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold" Text="0"/>
+            <Label Text="руб" FontSize="17" VerticalOptions="Center" TextColor="White"/>
+            <Button Text="Сброс" FontSize="14" Clicked="Delete_all" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
